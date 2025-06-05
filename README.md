@@ -30,3 +30,6 @@ Bu uygulama,Kullanıcı dostu bir arayüz sunar ve temel web teknolojilerini kul
 - **CSS3**
 - **Bootstrap**
 - **JavaScript**
+ ![Normal-Gorunum](https://github.com/user-attachments/assets/a3ccbe80-9a00-4ef3-bea4-bb08b4cfc532)
+![responseve-Gorunum](https://github.com/user-attachments/assets/92f8c804-719f-4712-b595-1fb5ff59fb50)
+
