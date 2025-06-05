@@ -1,0 +1,250 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(49, 47, 47);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    height: 8vh;
+    box-shadow: 0 5px 6px turquoise;
+    font-size: 30px;
+}
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-360deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 25px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    animation: rotateIn 1s ease-out forwards;
+}
+
+/* Kartlar */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: black; 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-40px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Film Başlığı */
+.card-title {
+    font-size: 25px ;
+    font-weight:600;
+}
+
+/* Film Açıklaması */
+.card-text {
+    font-size: 20px;
+    font-style: italic;
+}
+/* Butonlar */
+.btn-primary {
+    background-color:red;
+    border-color:red;
+}
+
+.btn-primary:hover {
+    background-color:turquoise;
+    border-color:turquoise;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #212529;
+    margin-bottom: 25px;
+}
+
+.btn-danger {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: background-color 0.4s ease;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+/* Arama Kutusu */
+#filmArama {
+    max-width: 400px;
+    margin: 0 5px 20px;
+    display: block;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #filmArama {
+    width: 100%;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+/* Başlık Ortala */
+.container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Favoriler Sayfası Özel Stil */
+#favori-filmler {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#favori-filmler .card {
+    background-color: #333;
+    border: none;
+    border-radius: 15px;
+    width: 18rem;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+#favori-filmler .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+}
+
+#favori-filmler .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 350px;
+    object-fit: cover;
+}
+
+#favori-filmler .btn-danger {
+    background-color: red;
+    border: none;
+}
+
+#favori-filmler .btn-danger:hover {
+    background-color: darkred;
+}
+
+
+#film-detay {
+    display: flex;
+    flex-direction: row; /* Yan yana */
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 50px;
+    gap: 40px;
+    min-height: auto; 
+    text-align: left; 
+    font-size: 18px;
+    color: white;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta düşsün */
+}
+
+#film-detay > div {
+    flex: 1 1 300px; /* Her iki taraf esnek, minimum genişlik 300px */
+}
+
+#film-detay img {
+    width: 100%; /* Genişlik konteynere uyacak */
+    height: auto;
+    max-height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    object-fit: contain;
+}
+
+#film-detay h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 45px;
+}
+
+#film-detay p {
+    line-height: 2;
+    font-size: 25px;
+}
+
+/* Butonlar için biraz margin ve hizalama */
+#film-detay .btn {
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#film-detay .btn-trailer {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.6);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  
+}
+
+#film-detay .btn-trailer:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.9);
+    transform: scale(1.05);
+}
